@@ -6,10 +6,10 @@ Researchers describe this discrepancy between our subjective perceptual experien
 
 This project endeavors to find experimental evidence in favor of one of these views through a repetitive transcranial magnetic stimulation (rTMS) study over the intraparietal sulcus (IPS). Could rTMS over the IPS reduce the vividness of participants’ phenomenal consciousness? One possible mechanism by which phenomenal consciousness may arise is the spatial distribution of attention over visual scenes. Fiebelkorn et al. (2018) identify the IPS as playing a key role in the dynamics of attenuating and enhancing visual processing at attended locations, thereby incentivizng the shifting of attention around the visual field. Such fleeting directions of attention to locations outside of the focally-attended region may result in the numerous low-resolution representations Cohen & Dennett (2011) suggest contribute to the vividness of phenomenal consciousness. This previous work, as well as the deficits in visual consciousness associated with parietal lesions, lead me to hypothesize that inhibitory stimulation, like rTMS, over the IPS will reduce participants' ability to spatially distribute their attention over a complex visual scene and thereby reduce the vividness of their phenomenal consciousness. I predict that when asked to identify the predominant type of figure in a composite Sperling grid composed of numbers, letters, and shapes, participats' accuracy in making the correct identification will be significanly reduced following rTMS to the IPS (see Fig. 1, 2). This would suggest that the stimulation inhibited their ability to distribute their attention over the grid and indicate a reduction in the vividness of their visual phenomenal consciousness. Such a finding would support the view that phenomenal consciousness does indeed rely on architectures higher than early visual areas, and would thereby be evidence in favor of its non-dissociability from access consciousness.
 
-**Fig. 1: rTMS design**
+**Fig. 1:**
 ![Fig. 1: rTMS design](https://github.com/sjh2208/GSP_Paris_Project/blob/main/rtms_design.png?raw=true)
 
-**Fig. 2: trial design**
+**Fig. 2:**
 ![Fig. 2: trial design](https://github.com/sjh2208/GSP_Paris_Project/blob/main/trial_design.png?raw=true)
 
 **References**
