@@ -1,6 +1,6 @@
 # Do Frontoparietal Attentional Networks Underlie Phenomenal Consciousness? A Transcranial Magnetic Stimulation Study of the Intraparietal Sulcus
 
-Consider watching the sun set over the Hudson River on a clear summer night. The experience is visually stunning, bordering on overwhelming: the buildings along the opposing shore, the sparkling waves, the gradient from white to crimson to violet. How could one describe the enormity of such a scene? This rich visual consciousness seems to elude a comprehensive description of sufficient detail to convey the subjective experience. Now, imagine that this scene was frightful or anxiety-inducing rather than serene. Understanding how subjective conscious experiences are generated in the brain is imperative for not only a basic-scientific understanding, but also for translational applications in treating disorders such as anxiety and depression which so drastically alter subjective experience.
+Consider watching the sun set over the Hudson River on a clear summer night. The experience is visually stunning, bordering on overwhelming: the buildings along the opposing shore, the sparkling waves, the gradient from white to crimson to violet. How could one describe the enormity of such a scene? This rich visual consciousness seems to elude a comprehensive description of sufficient detail to convey the subjective experience. Now, imagine that this scene was frightful or anxiety-inducing rather than serene. Understanding how subjective conscious experiences are generated in the brain is imperative for not only a basic-scientific understanding, but also for translational applications in treating disorders such as anxiety and depression which so drastically alter subjective experience (see Michel et al., 2019).
 
 Researchers describe this discrepancy between our subjective perceptual experience and what is reportable from that experience as a discrepancy between phenomenal consciousness and access consciousness, respectively. However, what brain architectures support either of these flavors of conscious experience—and whether or not they are dissociable functions—remains a topic of active debate. Some, such as Block (2011, 2014) and Lamme (2006), suggest that subjective, phenomenal consciousness is supported exclusively by early visual areas, and a bottleneck of information between these areas and higher, frontoparietal processing is what leads to the discrepancy with reportable, access consciousness. Others, such as Cohen & Dennett (2011) and Naccache (2018) suggest that no such dissociation between the two can be made. They defend this stance on the grounds of the impossibility to experimentally verify any discrepancy, as well as the apparent deficit in phenomenal consciousness in neglect disorders caused by lesions to parietal areas.
 
@@ -8,15 +8,17 @@ This project endeavors to support the latter view through a repetitive transcran
 
 **References**
 
-Block, N. (2011). Perceptual consciousness overflows cognitive access. Trends in Cognitive Sciences, 15(12), 567-575.
+Block, N. (2011). Perceptual consciousness overflows cognitive access. _Trends in Cognitive Sciences_, 15(12), 567-575.
 
-Block, N. (2014). Rich conscious perception outside focal attention. Trends in Cognitive Sciences, 18(9), 445-447.
+Block, N. (2014). Rich conscious perception outside focal attention. _Trends in Cognitive Sciences_, 18(9), 445-447.
 
-Cohen, M., & Dennett, D. (2011). Consciousness cannot be separated from function. Trends in Cognitive Sciences, 15(8), 358-364.
+Cohen, M., & Dennett, D. (2011). Consciousness cannot be separated from function. _Trends in Cognitive Sciences_, 15(8), 358-364.
 
-Lamme, V. (2006). Towards a true neural stance on consciousness. Trends in Cognitive Sciences, 10(11), 494-501.
+Lamme, V. (2006). Towards a true neural stance on consciousness. _Trends in Cognitive Science_s, 10(11), 494-501.
 
-Naccache, L. (2018). Why and how access consciousness can account for phenomenal consciousness. Phil. Trans. R. Soc. B, 373(1755).
+Naccache, L. (2018). Why and how access consciousness can account for phenomenal consciousness. _Phil. Trans. R. Soc. B_, 373(1755).
+
+Michel, M., Beck, D., Block, N., Blumenfeld, H., Brown, R., Carmel, D., ... & Dehaene, S. (2019). Opportunities and challenges for a maturing science of consciousness. _Nature Human Behaviour_, 3(2), 104.
 
 # Code Instructions
 
