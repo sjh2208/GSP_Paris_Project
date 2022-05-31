@@ -26,6 +26,8 @@ Michel, M., Beck, D., Block, N., Blumenfeld, H., Brown, R., Carmel, D., ... & De
 
 **Important: this experiment was designed and tested with PsychoPy3 v2021.2.3; it may not work with other versions!**
 
+**Note: the data folder and clean_data.csv file have some pilot data included, simply delete these two and follow the instructions below to generate your own data.**
+
 1. Generate the stimuli by running the **gen_stim.py** executable or the **Gen_Stim.ipynb** Jupyter notebook.
 2. Open **exp_code.py** executable in PsychoPy and run through the PsychoPy Runner. The **test_exp.psyexp** builder file can be opened in the PsychoPy Builder to visualize the structure of the task, but should not be run.
 3. Run either the **data_analysis.py** executable or the **Data_Analysis.ipynb** Jupyter notebook to update **clean_data.csv** with new data and visualize the results.
