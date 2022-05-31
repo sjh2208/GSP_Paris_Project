@@ -6,7 +6,7 @@ Researchers describe this discrepancy between our subjective perceptual experien
 
 This project endeavors to support the latter view through a repetitive transcranial magnetic stimulation study over the intraparietal sulcus, a region implicated in neglect disorders such as hemispatial neglect and Balint's syndrome. I hypothesize that such inhibitory stimulation will reduce participants' ability to spatially distribute their attention over a complex visual scene, such as a composite Sperling grid with numbers, letters, and shapes. Such a finding would support the view that phenomenal consciousness does indeed rely on architectures higher than early visual areas, and would be evidence in favor of its non-dissociability from access consciousness.
 
-References
+**References**
 
 Block, N. (2011). Perceptual consciousness overflows cognitive access. Trends in Cognitive Sciences, 15(12), 567-575.
 
