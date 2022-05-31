@@ -24,7 +24,7 @@ Michel, M., Beck, D., Block, N., Blumenfeld, H., Brown, R., Carmel, D., ... & De
 
 # Code Instructions
 
-**Important: this experiment was designed with PsychoPy3 v2021.2.3; it may not work with other versions!**
+**Important: this experiment was designed and tested with PsychoPy3 v2021.2.3; it may not work with other versions!**
 
 1. Generate the stimuli by running the **gen_stim.py** executable or the **Gen_Stim.ipynb** Jupyter notebook.
 2. Open **exp_code.py** executable in PsychoPy and run through the PsychoPy Runner. The **test_exp.psyexp** builder file can be opened in the builder to visualize the structure of the task, but should not be run.
