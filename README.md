@@ -1,4 +1,4 @@
-# Updated Proposal/Ed Discussion Post
+# Do Frontoparietal Attentional Networks Underlie Phenomenal Consciousness? A Transcranial Magnetic Stimulation Study of the Intraparietal Sulcus
 
 Consider watching the sun set over the Hudson River on a clear summer night. The experience is visually stunning, bordering on overwhelming: the buildings along the opposing shore, the sparkling waves, the gradient from white to crimson to violet. How could one describe the enormity of such a scene? This rich visual consciousness seems to elude a comprehensive description of sufficient detail to convey the subjective experience. Now, imagine that this scene was frightful or anxiety-inducing rather than serene. Understanding how subjective conscious experiences are generated in the brain is imperative for not only a basic-scientific understanding, but also for translational applications in treating disorders such as anxiety and depression which so drastically alter subjective experience.
 
