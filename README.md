@@ -14,7 +14,7 @@ Block, N. (2014). Rich conscious perception outside focal attention. _Trends in 
 
 Cohen, M., & Dennett, D. (2011). Consciousness cannot be separated from function. _Trends in Cognitive Sciences_, 15(8), 358-364.
 
-Lamme, V. (2006). Towards a true neural stance on consciousness. _Trends in Cognitive Science_s, 10(11), 494-501.
+Lamme, V. (2006). Towards a true neural stance on consciousness. _Trends in Cognitive Sciences_, 10(11), 494-501.
 
 Naccache, L. (2018). Why and how access consciousness can account for phenomenal consciousness. _Phil. Trans. R. Soc. B_, 373(1755).
 
