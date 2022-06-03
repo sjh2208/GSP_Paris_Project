@@ -12,7 +12,7 @@ This project endeavors to find experimental evidence in favor of one of these tw
 
 **Fig. 2:**
 
-![Fig. 2: trial design](https://github.com/sjh2208/GSP_Paris_Project/blob/main/trial_design.png?raw=true)
+![Fig. 2: trial design](https://github.com/sjh2208/GSP_Paris_Project/blob/main/trial_design_1.png?raw=true)
 
 
 **References**
