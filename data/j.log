@@ -1,0 +1,715 @@
+1.0776 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+17.4226 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1440, 900]. Using actual size
+18.1052 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fa5eab75a90>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fa5e9921860>, multiSample=False, name='window1', numSamples=2, pos=[360.0, 225.0], screen=0, size=array([2880, 1800]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+18.1055 	EXP 	window1: mouseVisible = True
+18.1056 	EXP 	window1: recordFrameIntervals = False
+18.2724 	EXP 	window1: recordFrameIntervals = True
+18.4557 	EXP 	window1: recordFrameIntervals = False
+19.3049 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.045, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+19.3087 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.075, 0.075]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+19.3139 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.  , 0.75]), texRes=128.0, units='height', win=Window(...))
+19.3154 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.075, 0.075]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+19.3290 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_5', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+19.3428 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_4', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+19.3477 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.075, 0.075]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+19.3516 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.  , 0.75]), texRes=200.0, units='height', win=Window(...))
+19.3531 	EXP 	Created polygon = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='polygon', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.075, 0.075]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+19.5311 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+19.5383 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_3', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+19.5480 	EXP 	text: autoDraw = True
+126.1434 	DATA 	Keypress: space
+126.1510 	EXP 	Created sequence: random, trialTypes=1, nReps=3, seed=None
+126.1515 	EXP 	New trial (rep=0, index=0): None
+126.1598 	EXP 	text: autoDraw = False
+126.1598 	EXP 	text: autoDraw = False
+126.1598 	EXP 	polygon: autoDraw = True
+127.2086 	EXP 	polygon: autoDraw = False
+127.2086 	EXP 	image_2: image = './stims/outputs/stim_1_97.png'
+127.2086 	EXP 	image_2: autoDraw = True
+128.1751 	EXP 	image_2: autoDraw = False
+128.1751 	EXP 	polygon: autoDraw = True
+129.1754 	EXP 	polygon: autoDraw = False
+129.1754 	EXP 	text_5: autoDraw = True
+133.9608 	DATA 	Keypress: 2
+133.9626 	EXP 	New trial (rep=1, index=0): None
+133.9760 	EXP 	text_5: autoDraw = False
+133.9760 	EXP 	text_5: autoDraw = False
+133.9760 	EXP 	polygon: autoDraw = True
+134.9939 	EXP 	polygon: autoDraw = False
+134.9939 	EXP 	image_2: image = './stims/outputs/stim_1_73.png'
+134.9939 	EXP 	image_2: autoDraw = True
+135.9921 	EXP 	image_2: autoDraw = False
+135.9921 	EXP 	polygon: autoDraw = True
+136.9917 	EXP 	polygon: autoDraw = False
+136.9917 	EXP 	text_5: autoDraw = True
+147.5937 	DATA 	Keypress: 2
+147.5953 	EXP 	New trial (rep=2, index=0): None
+147.6020 	EXP 	text_5: autoDraw = False
+147.6020 	EXP 	text_5: autoDraw = False
+147.6020 	EXP 	polygon: autoDraw = True
+148.6089 	EXP 	polygon: autoDraw = False
+148.6089 	EXP 	polygon: autoDraw = False
+148.6089 	EXP 	image_2: image = './stims/outputs/stim_1_25.png'
+148.6089 	EXP 	image_2: autoDraw = True
+149.6088 	EXP 	image_2: autoDraw = False
+149.6088 	EXP 	image_2: autoDraw = False
+149.6088 	EXP 	polygon: autoDraw = True
+150.6095 	EXP 	polygon: autoDraw = False
+150.6095 	EXP 	polygon: autoDraw = False
+150.6095 	EXP 	text_5: autoDraw = True
+151.8946 	DATA 	Keypress: 2
+151.9092 	EXP 	text_5: autoDraw = False
+151.9092 	EXP 	text_5: autoDraw = False
+151.9092 	EXP 	text_4: autoDraw = True
+155.5777 	DATA 	Keypress: space
+155.5791 	EXP 	Created sequence: sequential, trialTypes=1, nReps=50, seed=None
+155.5800 	EXP 	New trial (rep=0, index=0): None
+155.5921 	EXP 	text_4: autoDraw = False
+155.5921 	EXP 	text_4: autoDraw = False
+155.5921 	EXP 	polygon: autoDraw = True
+156.5944 	EXP 	polygon: autoDraw = False
+156.5944 	EXP 	polygon: autoDraw = False
+156.5944 	EXP 	image: image = './stims/outputs/stim_1_63.png'
+156.5944 	EXP 	image: autoDraw = True
+156.6594 	EXP 	image: autoDraw = False
+156.6594 	EXP 	polygon: autoDraw = True
+157.6591 	EXP 	polygon: autoDraw = False
+157.6591 	EXP 	text_2: autoDraw = True
+164.4958 	DATA 	Keypress: 1
+164.5008 	EXP 	New trial (rep=1, index=0): None
+164.5089 	EXP 	text_2: autoDraw = False
+164.5089 	EXP 	polygon: autoDraw = True
+165.5096 	EXP 	polygon: autoDraw = False
+165.5096 	EXP 	polygon: autoDraw = False
+165.5096 	EXP 	image: image = './stims/outputs/stim_1_69.png'
+165.5096 	EXP 	image: autoDraw = True
+165.7595 	EXP 	image: autoDraw = False
+165.7595 	EXP 	image: autoDraw = False
+165.7595 	EXP 	polygon: autoDraw = True
+166.7592 	EXP 	polygon: autoDraw = False
+166.7592 	EXP 	polygon: autoDraw = False
+166.7592 	EXP 	text_2: autoDraw = True
+167.2622 	DATA 	Keypress: 2
+167.2663 	EXP 	New trial (rep=2, index=0): None
+167.2757 	EXP 	text_2: autoDraw = False
+167.2757 	EXP 	polygon: autoDraw = True
+168.2774 	EXP 	polygon: autoDraw = False
+168.2774 	EXP 	polygon: autoDraw = False
+168.2774 	EXP 	image: image = './stims/outputs/stim_0_72.png'
+168.2774 	EXP 	image: autoDraw = True
+168.7094 	EXP 	image: autoDraw = False
+168.7094 	EXP 	polygon: autoDraw = True
+169.7095 	EXP 	polygon: autoDraw = False
+169.7095 	EXP 	text_2: autoDraw = True
+170.7278 	DATA 	Keypress: 1
+170.7319 	EXP 	New trial (rep=3, index=0): None
+170.7427 	EXP 	text_2: autoDraw = False
+170.7427 	EXP 	polygon: autoDraw = True
+171.7431 	EXP 	polygon: autoDraw = False
+171.7431 	EXP 	polygon: autoDraw = False
+171.7431 	EXP 	image: image = './stims/outputs/stim_0_96.png'
+171.7431 	EXP 	image: autoDraw = True
+171.9763 	EXP 	image: autoDraw = False
+171.9763 	EXP 	polygon: autoDraw = True
+172.9761 	EXP 	polygon: autoDraw = False
+172.9761 	EXP 	text_2: autoDraw = True
+173.6116 	DATA 	Keypress: 1
+173.6157 	EXP 	New trial (rep=4, index=0): None
+173.6260 	EXP 	text_2: autoDraw = False
+173.6260 	EXP 	polygon: autoDraw = True
+174.6259 	EXP 	polygon: autoDraw = False
+174.6259 	EXP 	polygon: autoDraw = False
+174.6259 	EXP 	image: image = './stims/outputs/stim_0_97.png'
+174.6259 	EXP 	image: autoDraw = True
+174.9598 	EXP 	image: autoDraw = False
+174.9598 	EXP 	polygon: autoDraw = True
+175.9593 	EXP 	polygon: autoDraw = False
+175.9593 	EXP 	text_2: autoDraw = True
+176.2950 	DATA 	Keypress: 1
+176.2991 	EXP 	New trial (rep=5, index=0): None
+176.3092 	EXP 	text_2: autoDraw = False
+176.3092 	EXP 	polygon: autoDraw = True
+177.3095 	EXP 	polygon: autoDraw = False
+177.3095 	EXP 	polygon: autoDraw = False
+177.3095 	EXP 	image: image = './stims/outputs/stim_0_92.png'
+177.3095 	EXP 	image: autoDraw = True
+177.4102 	EXP 	image: autoDraw = False
+177.4102 	EXP 	image: autoDraw = False
+177.4102 	EXP 	polygon: autoDraw = True
+178.4101 	EXP 	polygon: autoDraw = False
+178.4101 	EXP 	polygon: autoDraw = False
+178.4101 	EXP 	text_2: autoDraw = True
+178.8293 	DATA 	Keypress: 2
+178.8338 	EXP 	New trial (rep=6, index=0): None
+178.8431 	EXP 	text_2: autoDraw = False
+178.8431 	EXP 	polygon: autoDraw = True
+179.8427 	EXP 	polygon: autoDraw = False
+179.8427 	EXP 	polygon: autoDraw = False
+179.8427 	EXP 	image: image = './stims/outputs/stim_1_94.png'
+179.8427 	EXP 	image: autoDraw = True
+180.3269 	EXP 	image: autoDraw = False
+180.3269 	EXP 	polygon: autoDraw = True
+181.3262 	EXP 	polygon: autoDraw = False
+181.3262 	EXP 	text_2: autoDraw = True
+181.9613 	DATA 	Keypress: 1
+181.9654 	EXP 	New trial (rep=7, index=0): None
+181.9765 	EXP 	text_2: autoDraw = False
+181.9765 	EXP 	polygon: autoDraw = True
+182.9765 	EXP 	polygon: autoDraw = False
+182.9765 	EXP 	polygon: autoDraw = False
+182.9765 	EXP 	image: image = './stims/outputs/stim_1_18.png'
+182.9765 	EXP 	image: autoDraw = True
+183.1096 	EXP 	image: autoDraw = False
+183.1096 	EXP 	polygon: autoDraw = True
+184.1101 	EXP 	polygon: autoDraw = False
+184.1101 	EXP 	text_2: autoDraw = True
+185.0300 	EXP 	New trial (rep=8, index=0): None
+185.0341 	DATA 	Keypress: 2
+185.0435 	EXP 	text_2: autoDraw = False
+185.0435 	EXP 	polygon: autoDraw = True
+186.0436 	EXP 	polygon: autoDraw = False
+186.0436 	EXP 	polygon: autoDraw = False
+186.0436 	EXP 	image: image = './stims/outputs/stim_0_55.png'
+186.0436 	EXP 	image: autoDraw = True
+186.4933 	EXP 	image: autoDraw = False
+186.4933 	EXP 	image: autoDraw = False
+186.4933 	EXP 	polygon: autoDraw = True
+187.4935 	EXP 	polygon: autoDraw = False
+187.4935 	EXP 	polygon: autoDraw = False
+187.4935 	EXP 	text_2: autoDraw = True
+188.1283 	DATA 	Keypress: 1
+188.1324 	EXP 	New trial (rep=9, index=0): None
+188.1432 	EXP 	text_2: autoDraw = False
+188.1432 	EXP 	polygon: autoDraw = True
+189.1429 	EXP 	polygon: autoDraw = False
+189.1429 	EXP 	polygon: autoDraw = False
+189.1429 	EXP 	image: image = './stims/outputs/stim_1_21.png'
+189.1429 	EXP 	image: autoDraw = True
+189.4268 	EXP 	image: autoDraw = False
+189.4268 	EXP 	polygon: autoDraw = True
+190.4266 	EXP 	polygon: autoDraw = False
+190.4266 	EXP 	text_2: autoDraw = True
+191.3290 	DATA 	Keypress: 2
+191.3331 	EXP 	New trial (rep=10, index=0): None
+191.3435 	EXP 	text_2: autoDraw = False
+191.3435 	EXP 	polygon: autoDraw = True
+192.3434 	EXP 	polygon: autoDraw = False
+192.3434 	EXP 	polygon: autoDraw = False
+192.3434 	EXP 	image: image = './stims/outputs/stim_1_97.png'
+192.3434 	EXP 	image: autoDraw = True
+192.6437 	EXP 	image: autoDraw = False
+192.6437 	EXP 	image: autoDraw = False
+192.6437 	EXP 	polygon: autoDraw = True
+193.6435 	EXP 	polygon: autoDraw = False
+193.6435 	EXP 	polygon: autoDraw = False
+193.6435 	EXP 	text_2: autoDraw = True
+194.4458 	DATA 	Keypress: 2
+194.4493 	EXP 	New trial (rep=11, index=0): None
+194.4607 	EXP 	text_2: autoDraw = False
+194.4607 	EXP 	text_2: autoDraw = False
+194.4607 	EXP 	polygon: autoDraw = True
+195.4606 	EXP 	polygon: autoDraw = False
+195.4606 	EXP 	polygon: autoDraw = False
+195.4606 	EXP 	image: image = './stims/outputs/stim_1_75.png'
+195.4606 	EXP 	image: autoDraw = True
+195.9439 	EXP 	image: autoDraw = False
+195.9439 	EXP 	polygon: autoDraw = True
+196.9439 	EXP 	polygon: autoDraw = False
+196.9439 	EXP 	text_2: autoDraw = True
+199.5959 	DATA 	Keypress: 1
+199.6002 	EXP 	New trial (rep=12, index=0): None
+199.6099 	EXP 	text_2: autoDraw = False
+199.6099 	EXP 	polygon: autoDraw = True
+200.6107 	EXP 	polygon: autoDraw = False
+200.6107 	EXP 	polygon: autoDraw = False
+200.6107 	EXP 	image: image = './stims/outputs/stim_0_12.png'
+200.6107 	EXP 	image: autoDraw = True
+201.0939 	EXP 	image: autoDraw = False
+201.0939 	EXP 	polygon: autoDraw = True
+202.0936 	EXP 	polygon: autoDraw = False
+202.0936 	EXP 	text_2: autoDraw = True
+204.2794 	DATA 	Keypress: 1
+204.2835 	EXP 	New trial (rep=13, index=0): None
+204.2933 	EXP 	text_2: autoDraw = False
+204.2933 	EXP 	polygon: autoDraw = True
+205.2936 	EXP 	polygon: autoDraw = False
+205.2936 	EXP 	polygon: autoDraw = False
+205.2936 	EXP 	image: image = './stims/outputs/stim_1_96.png'
+205.2936 	EXP 	image: autoDraw = True
+205.3943 	EXP 	image: autoDraw = False
+205.3943 	EXP 	image: autoDraw = False
+205.3943 	EXP 	polygon: autoDraw = True
+206.3942 	EXP 	polygon: autoDraw = False
+206.3942 	EXP 	polygon: autoDraw = False
+206.3942 	EXP 	text_2: autoDraw = True
+213.5132 	DATA 	Keypress: 2
+213.5174 	EXP 	New trial (rep=14, index=0): None
+213.5271 	EXP 	text_2: autoDraw = False
+213.5271 	EXP 	polygon: autoDraw = True
+214.5428 	EXP 	polygon: autoDraw = False
+214.5428 	EXP 	polygon: autoDraw = False
+214.5428 	EXP 	image: image = './stims/outputs/stim_0_68.png'
+214.5428 	EXP 	image: autoDraw = True
+214.9943 	EXP 	image: autoDraw = False
+214.9943 	EXP 	polygon: autoDraw = True
+215.9937 	EXP 	polygon: autoDraw = False
+215.9937 	EXP 	text_2: autoDraw = True
+217.2460 	DATA 	Keypress: 2
+217.2502 	EXP 	New trial (rep=15, index=0): None
+217.2607 	EXP 	text_2: autoDraw = False
+217.2607 	EXP 	polygon: autoDraw = True
+218.2610 	EXP 	polygon: autoDraw = False
+218.2610 	EXP 	polygon: autoDraw = False
+218.2610 	EXP 	image: image = './stims/outputs/stim_0_50.png'
+218.2610 	EXP 	image: autoDraw = True
+218.3440 	EXP 	image: autoDraw = False
+218.3440 	EXP 	polygon: autoDraw = True
+219.3437 	EXP 	polygon: autoDraw = False
+219.3437 	EXP 	text_2: autoDraw = True
+225.7129 	DATA 	Keypress: 1
+225.7171 	EXP 	New trial (rep=16, index=0): None
+225.7276 	EXP 	text_2: autoDraw = False
+225.7276 	EXP 	polygon: autoDraw = True
+226.7279 	EXP 	polygon: autoDraw = False
+226.7279 	EXP 	polygon: autoDraw = False
+226.7279 	EXP 	image: image = './stims/outputs/stim_1_37.png'
+226.7279 	EXP 	image: autoDraw = True
+227.1611 	EXP 	image: autoDraw = False
+227.1611 	EXP 	polygon: autoDraw = True
+228.1608 	EXP 	polygon: autoDraw = False
+228.1608 	EXP 	text_2: autoDraw = True
+229.1804 	DATA 	Keypress: 1
+229.1845 	EXP 	New trial (rep=17, index=0): None
+229.1944 	EXP 	text_2: autoDraw = False
+229.1944 	EXP 	polygon: autoDraw = True
+230.1942 	EXP 	polygon: autoDraw = False
+230.1942 	EXP 	polygon: autoDraw = False
+230.1942 	EXP 	image: image = './stims/outputs/stim_1_53.png'
+230.1942 	EXP 	image: autoDraw = True
+230.4285 	EXP 	image: autoDraw = False
+230.4285 	EXP 	polygon: autoDraw = True
+231.4278 	EXP 	polygon: autoDraw = False
+231.4278 	EXP 	text_2: autoDraw = True
+234.2473 	DATA 	Keypress: 1
+234.2514 	EXP 	New trial (rep=18, index=0): None
+234.2611 	EXP 	text_2: autoDraw = False
+234.2611 	EXP 	polygon: autoDraw = True
+235.2613 	EXP 	polygon: autoDraw = False
+235.2613 	EXP 	polygon: autoDraw = False
+235.2613 	EXP 	image: image = './stims/outputs/stim_1_53.png'
+235.2613 	EXP 	image: autoDraw = True
+235.4453 	EXP 	image: autoDraw = False
+235.4453 	EXP 	polygon: autoDraw = True
+236.4452 	EXP 	polygon: autoDraw = False
+236.4452 	EXP 	text_2: autoDraw = True
+237.8467 	DATA 	Keypress: 2
+237.8508 	EXP 	New trial (rep=19, index=0): None
+237.8618 	EXP 	text_2: autoDraw = False
+237.8618 	EXP 	polygon: autoDraw = True
+238.8613 	EXP 	polygon: autoDraw = False
+238.8613 	EXP 	polygon: autoDraw = False
+238.8613 	EXP 	image: image = './stims/outputs/stim_1_79.png'
+238.8613 	EXP 	image: autoDraw = True
+239.1950 	EXP 	image: autoDraw = False
+239.1950 	EXP 	polygon: autoDraw = True
+240.1948 	EXP 	polygon: autoDraw = False
+240.1948 	EXP 	text_2: autoDraw = True
+244.3476 	DATA 	Keypress: 2
+244.3518 	EXP 	New trial (rep=20, index=0): None
+244.3618 	EXP 	text_2: autoDraw = False
+244.3618 	EXP 	polygon: autoDraw = True
+245.3622 	EXP 	polygon: autoDraw = False
+245.3622 	EXP 	polygon: autoDraw = False
+245.3622 	EXP 	image: image = './stims/outputs/stim_0_16.png'
+245.3622 	EXP 	image: autoDraw = True
+245.5955 	EXP 	image: autoDraw = False
+245.5955 	EXP 	polygon: autoDraw = True
+246.5956 	EXP 	polygon: autoDraw = False
+246.5956 	EXP 	text_2: autoDraw = True
+247.1472 	DATA 	Keypress: 1
+247.1513 	EXP 	New trial (rep=21, index=0): None
+247.1619 	EXP 	text_2: autoDraw = False
+247.1619 	EXP 	polygon: autoDraw = True
+248.1618 	EXP 	polygon: autoDraw = False
+248.1618 	EXP 	polygon: autoDraw = False
+248.1618 	EXP 	image: image = './stims/outputs/stim_1_11.png'
+248.1618 	EXP 	image: autoDraw = True
+248.4122 	EXP 	image: autoDraw = False
+248.4122 	EXP 	image: autoDraw = False
+248.4122 	EXP 	polygon: autoDraw = True
+249.4117 	EXP 	polygon: autoDraw = False
+249.4117 	EXP 	polygon: autoDraw = False
+249.4117 	EXP 	text_2: autoDraw = True
+250.4310 	DATA 	Keypress: 1
+250.4350 	EXP 	New trial (rep=22, index=0): None
+250.4459 	EXP 	text_2: autoDraw = False
+250.4459 	EXP 	polygon: autoDraw = True
+251.4452 	EXP 	polygon: autoDraw = False
+251.4452 	EXP 	polygon: autoDraw = False
+251.4452 	EXP 	image: image = './stims/outputs/stim_1_49.png'
+251.4452 	EXP 	image: autoDraw = True
+251.5297 	EXP 	image: autoDraw = False
+251.5297 	EXP 	polygon: autoDraw = True
+252.5286 	EXP 	polygon: autoDraw = False
+252.5286 	EXP 	text_2: autoDraw = True
+253.2992 	EXP 	New trial (rep=23, index=0): None
+253.3040 	DATA 	Keypress: 2
+253.3121 	EXP 	text_2: autoDraw = False
+253.3121 	EXP 	polygon: autoDraw = True
+254.3123 	EXP 	polygon: autoDraw = False
+254.3123 	EXP 	polygon: autoDraw = False
+254.3123 	EXP 	image: image = './stims/outputs/stim_0_63.png'
+254.3123 	EXP 	image: autoDraw = True
+254.5626 	EXP 	image: autoDraw = False
+254.5626 	EXP 	image: autoDraw = False
+254.5626 	EXP 	polygon: autoDraw = True
+255.5619 	EXP 	polygon: autoDraw = False
+255.5619 	EXP 	polygon: autoDraw = False
+255.5619 	EXP 	text_2: autoDraw = True
+255.9646 	DATA 	Keypress: 1
+255.9687 	EXP 	New trial (rep=24, index=0): None
+255.9785 	EXP 	text_2: autoDraw = False
+255.9785 	EXP 	polygon: autoDraw = True
+256.9789 	EXP 	polygon: autoDraw = False
+256.9789 	EXP 	polygon: autoDraw = False
+256.9789 	EXP 	image: image = './stims/outputs/stim_1_8.png'
+256.9789 	EXP 	image: autoDraw = True
+257.1129 	EXP 	image: autoDraw = False
+257.1129 	EXP 	polygon: autoDraw = True
+258.1130 	EXP 	polygon: autoDraw = False
+258.1130 	EXP 	text_2: autoDraw = True
+258.6334 	EXP 	New trial (rep=25, index=0): None
+258.6374 	DATA 	Keypress: 2
+258.6456 	EXP 	text_2: autoDraw = False
+258.6456 	EXP 	polygon: autoDraw = True
+259.6456 	EXP 	polygon: autoDraw = False
+259.6456 	EXP 	polygon: autoDraw = False
+259.6456 	EXP 	image: image = './stims/outputs/stim_1_47.png'
+259.6456 	EXP 	image: autoDraw = True
+259.7289 	EXP 	image: autoDraw = False
+259.7289 	EXP 	polygon: autoDraw = True
+260.7287 	EXP 	polygon: autoDraw = False
+260.7287 	EXP 	text_2: autoDraw = True
+261.4311 	DATA 	Keypress: 1
+261.4352 	EXP 	New trial (rep=26, index=0): None
+261.4454 	EXP 	text_2: autoDraw = False
+261.4454 	EXP 	polygon: autoDraw = True
+262.4457 	EXP 	polygon: autoDraw = False
+262.4457 	EXP 	polygon: autoDraw = False
+262.4457 	EXP 	image: image = './stims/outputs/stim_0_90.png'
+262.4457 	EXP 	image: autoDraw = True
+262.8960 	EXP 	image: autoDraw = False
+262.8960 	EXP 	image: autoDraw = False
+262.8960 	EXP 	polygon: autoDraw = True
+263.8957 	EXP 	polygon: autoDraw = False
+263.8957 	EXP 	polygon: autoDraw = False
+263.8957 	EXP 	text_2: autoDraw = True
+265.3650 	DATA 	Keypress: 1
+265.3691 	EXP 	New trial (rep=27, index=0): None
+265.3789 	EXP 	text_2: autoDraw = False
+265.3789 	EXP 	polygon: autoDraw = True
+266.3790 	EXP 	polygon: autoDraw = False
+266.3790 	EXP 	polygon: autoDraw = False
+266.3790 	EXP 	image: image = './stims/outputs/stim_0_48.png'
+266.3790 	EXP 	image: autoDraw = True
+266.4624 	EXP 	image: autoDraw = False
+266.4624 	EXP 	polygon: autoDraw = True
+267.4628 	EXP 	polygon: autoDraw = False
+267.4628 	EXP 	text_2: autoDraw = True
+267.9480 	DATA 	Keypress: 1
+267.9521 	EXP 	New trial (rep=28, index=0): None
+267.9625 	EXP 	text_2: autoDraw = False
+267.9625 	EXP 	polygon: autoDraw = True
+268.9631 	EXP 	polygon: autoDraw = False
+268.9631 	EXP 	polygon: autoDraw = False
+268.9631 	EXP 	image: image = './stims/outputs/stim_1_25.png'
+268.9631 	EXP 	image: autoDraw = True
+269.1628 	EXP 	image: autoDraw = False
+269.1628 	EXP 	image: autoDraw = False
+269.1628 	EXP 	polygon: autoDraw = True
+270.1627 	EXP 	polygon: autoDraw = False
+270.1627 	EXP 	polygon: autoDraw = False
+270.1627 	EXP 	text_2: autoDraw = True
+270.5652 	DATA 	Keypress: 1
+270.5694 	EXP 	New trial (rep=29, index=0): None
+270.5794 	EXP 	text_2: autoDraw = False
+270.5794 	EXP 	polygon: autoDraw = True
+271.5797 	EXP 	polygon: autoDraw = False
+271.5797 	EXP 	polygon: autoDraw = False
+271.5797 	EXP 	image: image = './stims/outputs/stim_0_2.png'
+271.5797 	EXP 	image: autoDraw = True
+271.6625 	EXP 	image: autoDraw = False
+271.6625 	EXP 	polygon: autoDraw = True
+272.6631 	EXP 	polygon: autoDraw = False
+272.6631 	EXP 	text_2: autoDraw = True
+273.3662 	EXP 	New trial (rep=30, index=0): None
+273.3704 	DATA 	Keypress: 2
+273.3795 	EXP 	text_2: autoDraw = False
+273.3795 	EXP 	polygon: autoDraw = True
+274.3797 	EXP 	polygon: autoDraw = False
+274.3797 	EXP 	polygon: autoDraw = False
+274.3797 	EXP 	image: image = './stims/outputs/stim_0_80.png'
+274.3797 	EXP 	image: autoDraw = True
+274.5300 	EXP 	image: autoDraw = False
+274.5300 	EXP 	image: autoDraw = False
+274.5300 	EXP 	polygon: autoDraw = True
+275.5304 	EXP 	polygon: autoDraw = False
+275.5304 	EXP 	polygon: autoDraw = False
+275.5304 	EXP 	text_2: autoDraw = True
+275.9815 	DATA 	Keypress: 1
+275.9849 	EXP 	New trial (rep=31, index=0): None
+275.9960 	EXP 	text_2: autoDraw = False
+275.9960 	EXP 	polygon: autoDraw = True
+276.9961 	EXP 	polygon: autoDraw = False
+276.9961 	EXP 	polygon: autoDraw = False
+276.9961 	EXP 	image: image = './stims/outputs/stim_0_64.png'
+276.9961 	EXP 	image: autoDraw = True
+277.3799 	EXP 	image: autoDraw = False
+277.3799 	EXP 	polygon: autoDraw = True
+278.3800 	EXP 	polygon: autoDraw = False
+278.3800 	EXP 	text_2: autoDraw = True
+278.9830 	EXP 	New trial (rep=32, index=0): None
+278.9872 	DATA 	Keypress: 1
+278.9963 	EXP 	text_2: autoDraw = False
+278.9963 	EXP 	polygon: autoDraw = True
+279.9965 	EXP 	polygon: autoDraw = False
+279.9965 	EXP 	polygon: autoDraw = False
+279.9965 	EXP 	image: image = './stims/outputs/stim_0_71.png'
+279.9965 	EXP 	image: autoDraw = True
+280.1305 	EXP 	image: autoDraw = False
+280.1305 	EXP 	polygon: autoDraw = True
+281.1298 	EXP 	polygon: autoDraw = False
+281.1298 	EXP 	text_2: autoDraw = True
+284.0485 	DATA 	Keypress: 1
+284.0527 	EXP 	New trial (rep=33, index=0): None
+284.0634 	EXP 	text_2: autoDraw = False
+284.0634 	EXP 	polygon: autoDraw = True
+285.0633 	EXP 	polygon: autoDraw = False
+285.0633 	EXP 	polygon: autoDraw = False
+285.0633 	EXP 	image: image = './stims/outputs/stim_1_87.png'
+285.0633 	EXP 	image: autoDraw = True
+285.2472 	EXP 	image: autoDraw = False
+285.2472 	EXP 	polygon: autoDraw = True
+286.2467 	EXP 	polygon: autoDraw = False
+286.2467 	EXP 	text_2: autoDraw = True
+286.5838 	EXP 	New trial (rep=34, index=0): None
+286.5880 	DATA 	Keypress: 1
+286.5966 	EXP 	text_2: autoDraw = False
+286.5966 	EXP 	polygon: autoDraw = True
+287.5962 	EXP 	polygon: autoDraw = False
+287.5962 	EXP 	polygon: autoDraw = False
+287.5962 	EXP 	image: image = './stims/outputs/stim_0_99.png'
+287.5962 	EXP 	image: autoDraw = True
+287.6462 	EXP 	image: autoDraw = False
+287.6462 	EXP 	image: autoDraw = False
+287.6462 	EXP 	polygon: autoDraw = True
+288.6464 	EXP 	polygon: autoDraw = False
+288.6464 	EXP 	polygon: autoDraw = False
+288.6464 	EXP 	text_2: autoDraw = True
+289.7988 	DATA 	Keypress: 1
+289.8029 	EXP 	New trial (rep=35, index=0): None
+289.8132 	EXP 	text_2: autoDraw = False
+289.8132 	EXP 	polygon: autoDraw = True
+290.8137 	EXP 	polygon: autoDraw = False
+290.8137 	EXP 	polygon: autoDraw = False
+290.8137 	EXP 	image: image = './stims/outputs/stim_1_9.png'
+290.8137 	EXP 	image: autoDraw = True
+291.0140 	EXP 	image: autoDraw = False
+291.0140 	EXP 	image: autoDraw = False
+291.0140 	EXP 	polygon: autoDraw = True
+292.0132 	EXP 	polygon: autoDraw = False
+292.0132 	EXP 	polygon: autoDraw = False
+292.0132 	EXP 	text_2: autoDraw = True
+292.7319 	DATA 	Keypress: 2
+292.7360 	EXP 	New trial (rep=36, index=0): None
+292.7467 	EXP 	text_2: autoDraw = False
+292.7467 	EXP 	polygon: autoDraw = True
+293.7469 	EXP 	polygon: autoDraw = False
+293.7469 	EXP 	polygon: autoDraw = False
+293.7469 	EXP 	image: image = './stims/outputs/stim_1_66.png'
+293.7469 	EXP 	image: autoDraw = True
+294.0802 	EXP 	image: autoDraw = False
+294.0802 	EXP 	polygon: autoDraw = True
+295.0804 	EXP 	polygon: autoDraw = False
+295.0804 	EXP 	text_2: autoDraw = True
+295.7993 	DATA 	Keypress: 1
+295.8034 	EXP 	New trial (rep=37, index=0): None
+295.8133 	EXP 	text_2: autoDraw = False
+295.8133 	EXP 	polygon: autoDraw = True
+296.8134 	EXP 	polygon: autoDraw = False
+296.8134 	EXP 	polygon: autoDraw = False
+296.8134 	EXP 	image: image = './stims/outputs/stim_0_85.png'
+296.8134 	EXP 	image: autoDraw = True
+296.9637 	EXP 	image: autoDraw = False
+296.9637 	EXP 	image: autoDraw = False
+296.9637 	EXP 	polygon: autoDraw = True
+297.9637 	EXP 	polygon: autoDraw = False
+297.9637 	EXP 	polygon: autoDraw = False
+297.9637 	EXP 	text_2: autoDraw = True
+299.1493 	DATA 	Keypress: 1
+299.1534 	EXP 	New trial (rep=38, index=0): None
+299.1633 	EXP 	text_2: autoDraw = False
+299.1633 	EXP 	polygon: autoDraw = True
+300.1638 	EXP 	polygon: autoDraw = False
+300.1638 	EXP 	polygon: autoDraw = False
+300.1638 	EXP 	image: image = './stims/outputs/stim_1_89.png'
+300.1638 	EXP 	image: autoDraw = True
+300.2636 	EXP 	image: autoDraw = False
+300.2636 	EXP 	image: autoDraw = False
+300.2636 	EXP 	polygon: autoDraw = True
+301.2641 	EXP 	polygon: autoDraw = False
+301.2641 	EXP 	polygon: autoDraw = False
+301.2641 	EXP 	text_2: autoDraw = True
+302.1987 	DATA 	Keypress: 2
+302.2030 	EXP 	New trial (rep=39, index=0): None
+302.2137 	EXP 	text_2: autoDraw = False
+302.2137 	EXP 	polygon: autoDraw = True
+303.2141 	EXP 	polygon: autoDraw = False
+303.2141 	EXP 	polygon: autoDraw = False
+303.2141 	EXP 	image: image = './stims/outputs/stim_1_39.png'
+303.2141 	EXP 	image: autoDraw = True
+303.5474 	EXP 	image: autoDraw = False
+303.5474 	EXP 	polygon: autoDraw = True
+304.5478 	EXP 	polygon: autoDraw = False
+304.5478 	EXP 	text_2: autoDraw = True
+305.1173 	EXP 	New trial (rep=40, index=0): None
+305.1217 	DATA 	Keypress: 2
+305.1305 	EXP 	text_2: autoDraw = False
+305.1305 	EXP 	polygon: autoDraw = True
+306.1303 	EXP 	polygon: autoDraw = False
+306.1303 	EXP 	polygon: autoDraw = False
+306.1303 	EXP 	image: image = './stims/outputs/stim_0_67.png'
+306.1303 	EXP 	image: autoDraw = True
+306.5139 	EXP 	image: autoDraw = False
+306.5139 	EXP 	polygon: autoDraw = True
+307.5140 	EXP 	polygon: autoDraw = False
+307.5140 	EXP 	text_2: autoDraw = True
+309.1659 	DATA 	Keypress: 1
+309.1700 	EXP 	New trial (rep=41, index=0): None
+309.1812 	EXP 	text_2: autoDraw = False
+309.1812 	EXP 	polygon: autoDraw = True
+310.1805 	EXP 	polygon: autoDraw = False
+310.1805 	EXP 	polygon: autoDraw = False
+310.1805 	EXP 	image: image = './stims/outputs/stim_1_22.png'
+310.1805 	EXP 	image: autoDraw = True
+310.2805 	EXP 	image: autoDraw = False
+310.2805 	EXP 	image: autoDraw = False
+310.2805 	EXP 	polygon: autoDraw = True
+311.2806 	EXP 	polygon: autoDraw = False
+311.2806 	EXP 	polygon: autoDraw = False
+311.2806 	EXP 	text_2: autoDraw = True
+311.5995 	EXP 	New trial (rep=42, index=0): None
+311.6020 	DATA 	Keypress: 2
+311.6140 	EXP 	text_2: autoDraw = False
+311.6140 	EXP 	polygon: autoDraw = True
+312.6146 	EXP 	polygon: autoDraw = False
+312.6146 	EXP 	polygon: autoDraw = False
+312.6146 	EXP 	image: image = './stims/outputs/stim_1_16.png'
+312.6146 	EXP 	image: autoDraw = True
+312.8642 	EXP 	image: autoDraw = False
+312.8642 	EXP 	image: autoDraw = False
+312.8642 	EXP 	polygon: autoDraw = True
+313.8637 	EXP 	polygon: autoDraw = False
+313.8637 	EXP 	polygon: autoDraw = False
+313.8637 	EXP 	text_2: autoDraw = True
+316.5495 	DATA 	Keypress: 1
+316.5537 	EXP 	New trial (rep=43, index=0): None
+316.5639 	EXP 	text_2: autoDraw = False
+316.5639 	EXP 	polygon: autoDraw = True
+317.5638 	EXP 	polygon: autoDraw = False
+317.5638 	EXP 	polygon: autoDraw = False
+317.5638 	EXP 	image: image = './stims/outputs/stim_1_37.png'
+317.5638 	EXP 	image: autoDraw = True
+317.9148 	EXP 	image: autoDraw = False
+317.9148 	EXP 	image: autoDraw = False
+317.9148 	EXP 	polygon: autoDraw = True
+318.9140 	EXP 	polygon: autoDraw = False
+318.9140 	EXP 	polygon: autoDraw = False
+318.9140 	EXP 	text_2: autoDraw = True
+320.1496 	DATA 	Keypress: 1
+320.1537 	EXP 	New trial (rep=44, index=0): None
+320.1640 	EXP 	text_2: autoDraw = False
+320.1640 	EXP 	polygon: autoDraw = True
+321.1641 	EXP 	polygon: autoDraw = False
+321.1641 	EXP 	polygon: autoDraw = False
+321.1641 	EXP 	image: image = './stims/outputs/stim_1_0.png'
+321.1641 	EXP 	image: autoDraw = True
+321.5645 	EXP 	image: autoDraw = False
+321.5645 	EXP 	image: autoDraw = False
+321.5645 	EXP 	polygon: autoDraw = True
+322.5645 	EXP 	polygon: autoDraw = False
+322.5645 	EXP 	polygon: autoDraw = False
+322.5645 	EXP 	text_2: autoDraw = True
+323.9851 	EXP 	New trial (rep=45, index=0): None
+323.9893 	DATA 	Keypress: 1
+323.9977 	EXP 	text_2: autoDraw = False
+323.9977 	EXP 	polygon: autoDraw = True
+324.9982 	EXP 	polygon: autoDraw = False
+324.9982 	EXP 	polygon: autoDraw = False
+324.9982 	EXP 	image: image = './stims/outputs/stim_1_24.png'
+324.9982 	EXP 	image: autoDraw = True
+325.3479 	EXP 	image: autoDraw = False
+325.3479 	EXP 	image: autoDraw = False
+325.3479 	EXP 	polygon: autoDraw = True
+326.3479 	EXP 	polygon: autoDraw = False
+326.3479 	EXP 	polygon: autoDraw = False
+326.3479 	EXP 	text_2: autoDraw = True
+326.6996 	DATA 	Keypress: 1
+326.7038 	EXP 	New trial (rep=46, index=0): None
+326.7145 	EXP 	text_2: autoDraw = False
+326.7145 	EXP 	polygon: autoDraw = True
+327.7150 	EXP 	polygon: autoDraw = False
+327.7150 	EXP 	polygon: autoDraw = False
+327.7150 	EXP 	image: image = './stims/outputs/stim_1_88.png'
+327.7150 	EXP 	image: autoDraw = True
+327.9978 	EXP 	image: autoDraw = False
+327.9978 	EXP 	polygon: autoDraw = True
+328.9984 	EXP 	polygon: autoDraw = False
+328.9984 	EXP 	text_2: autoDraw = True
+329.4163 	DATA 	Keypress: 2
+329.4204 	EXP 	New trial (rep=47, index=0): None
+329.4311 	EXP 	text_2: autoDraw = False
+329.4311 	EXP 	polygon: autoDraw = True
+330.4317 	EXP 	polygon: autoDraw = False
+330.4317 	EXP 	polygon: autoDraw = False
+330.4317 	EXP 	image: image = './stims/outputs/stim_0_71.png'
+330.4317 	EXP 	image: autoDraw = True
+330.7313 	EXP 	image: autoDraw = False
+330.7313 	EXP 	image: autoDraw = False
+330.7313 	EXP 	polygon: autoDraw = True
+331.7313 	EXP 	polygon: autoDraw = False
+331.7313 	EXP 	polygon: autoDraw = False
+331.7313 	EXP 	text_2: autoDraw = True
+332.5004 	DATA 	Keypress: 1
+332.5046 	EXP 	New trial (rep=48, index=0): None
+332.5146 	EXP 	text_2: autoDraw = False
+332.5146 	EXP 	polygon: autoDraw = True
+333.5144 	EXP 	polygon: autoDraw = False
+333.5144 	EXP 	polygon: autoDraw = False
+333.5144 	EXP 	image: image = './stims/outputs/stim_1_20.png'
+333.5144 	EXP 	image: autoDraw = True
+333.9482 	EXP 	image: autoDraw = False
+333.9482 	EXP 	polygon: autoDraw = True
+334.9483 	EXP 	polygon: autoDraw = False
+334.9483 	EXP 	text_2: autoDraw = True
+335.3185 	EXP 	New trial (rep=49, index=0): None
+335.3227 	DATA 	Keypress: 1
+335.3315 	EXP 	text_2: autoDraw = False
+335.3315 	EXP 	polygon: autoDraw = True
+336.3313 	EXP 	polygon: autoDraw = False
+336.3313 	EXP 	polygon: autoDraw = False
+336.3313 	EXP 	image: image = './stims/outputs/stim_0_63.png'
+336.3313 	EXP 	image: autoDraw = True
+336.3813 	EXP 	image: autoDraw = False
+336.3813 	EXP 	image: autoDraw = False
+336.3813 	EXP 	polygon: autoDraw = True
+337.3815 	EXP 	polygon: autoDraw = False
+337.3815 	EXP 	polygon: autoDraw = False
+337.3815 	EXP 	text_2: autoDraw = True
+338.1676 	DATA 	Keypress: 1
+338.1812 	EXP 	text_2: autoDraw = False
+338.1812 	EXP 	text_3: autoDraw = True
+342.1002 	DATA 	Keypress: space
+342.1155 	EXP 	text_3: autoDraw = False
+342.1155 	EXP 	text_3: autoDraw = False
+342.1826 	EXP 	window1: mouseVisible = True

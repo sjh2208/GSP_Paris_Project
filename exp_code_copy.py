@@ -87,7 +87,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "inst1"
 inst1Clock = core.Clock()
 text = visual.TextStim(win=win, name='text',
-    text='You will first see a 3x4 grid containing either special characters letters or numbers in each box.\n\nYou will then be asked to name which kind of figure (letter or number) occupied most of the boxes in the grid that you saw.\n\nThen, when prompted, please respond by pressing one of the following keys:\n\n‘1’ - Letters predominated\n‘2’ - Numbers predominated\n\nBefore the first trial, as well as before each response, please focus your attention on the fixation cross in the center of the screen. \n\nWe’ll start with three practice rounds. When you are ready to start, press the space bar.\n',
+    text='You will first see a 3x4 grid containing either shapes, letters, or numbers in each box.\n\nYou will then be asked to name which kind of figure (shape, letter, or number) occupied most of the boxes in the grid that you saw.\n\nThen, when prompted, please respond by pressing one of the following keys:\n\n‘1’ - Shapes predominated\n‘2’ - Letters predominated\n‘3’ - Numbers predominated\n\nBefore the first trial, as well as before each response, please focus your attention on the fixation cross in the center of the screen. \n\nWe’ll start with three practice rounds. When you are ready to start, press the space bar.\n',
     font='Open Sans',
     pos=(0, 0), height=0.045, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -126,7 +126,7 @@ polygon = visual.ShapeStim(
 # Initialize components for Routine "prac_resp"
 prac_respClock = core.Clock()
 text_5 = visual.TextStim(win=win, name='text_5',
-    text='Which kind of figure predominated?\n\n‘1’ - Letters\n‘2’ - Numbers',
+    text='Which kind of figure predominated?\n\n‘1’ - Shapes\n‘2’ - Letters\n‘3’ - Numbers',
     font='Open Sans',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -176,7 +176,7 @@ polygon = visual.ShapeStim(
 respClock = core.Clock()
 key_resp = keyboard.Keyboard()
 text_2 = visual.TextStim(win=win, name='text_2',
-    text='Which kind of figure predominated?\n\n‘1’ - Letters\n‘2’ - Numbers',
+    text='Which kind of figure predominated?\n\n‘1’ - Shapes\n‘2’ - Letters\n‘3’ - Numbers',
     font='Open Sans',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
@@ -358,8 +358,8 @@ for thisTrial_2 in trials_2:
     continueRoutine = True
     routineTimer.add(1.000000)
     # update component parameters for each repeat
-    fig = randint(0,2)
-    num = randint(0,100)
+    fig = randint(0,3)
+    num = randint(0,20)
     image_2.setImage(stim_path.format(f=fig, n=num))
     # keep track of which components have finished
     prac_trialComponents = [image_2]
@@ -532,7 +532,7 @@ for thisTrial_2 in trials_2:
             win.timeOnFlip(text_5, 'tStartRefresh')  # time at next scr refresh
             text_5.setAutoDraw(True)
         if text_5.status == STARTED:
-            if bool(event.getKeys(keyList=['1','2'])):
+            if bool(event.getKeys(keyList=['1','2','3'])):
                 # keep track of stop time/frame for later
                 text_5.tStop = t  # not accounting for scr refresh
                 text_5.frameNStop = frameN  # exact frame index
@@ -734,7 +734,7 @@ for thisTrial in trials:
     routineTimer.add(rand_time)
     thisExp.addData('text.started', text.tStartRefresh)
     # update component parameters for each repeat
-    fig = randint(0,2)
+    fig = randint(0,3)
     num = randint(0,100)
     image.setImage(stim_path.format(f=fig, n=num))
     
@@ -921,14 +921,14 @@ for thisTrial in trials:
             win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if key_resp.status == STARTED:
             event.clearEvents()
-            if bool(event.getKeys(keyList=['1','2'])):
+            if bool(event.getKeys(keyList=['1','2','3'])):
                 # keep track of stop time/frame for later
                 key_resp.tStop = t  # not accounting for scr refresh
                 key_resp.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(key_resp, 'tStopRefresh')  # time at next scr refresh
                 key_resp.status = FINISHED
         if key_resp.status == STARTED and not waitOnFlip:
-            theseKeys = key_resp.getKeys(keyList=['1', '2'], waitRelease=False)
+            theseKeys = key_resp.getKeys(keyList=['1', '2', '3'], waitRelease=False)
             _key_resp_allKeys.extend(theseKeys)
             if len(_key_resp_allKeys):
                 key_resp.keys = _key_resp_allKeys[-1].name  # just the last key pressed
