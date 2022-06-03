@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[ ]:
 
 
 import pandas as pd
@@ -13,7 +13,7 @@ import seaborn as sns
 import scipy.stats as stat
 
 
-# In[3]:
+# In[ ]:
 
 
 #clean and organize data
@@ -74,12 +74,12 @@ clean_df.to_csv('./clean_data.csv')
 print('Done with data cleaning!')
 
 
-# In[7]:
+# In[ ]:
 
 
 #duration vs hit rate
 
-print('Number of trials:', len(df.index))
+print('Number of trials:', len(clean_df.index))
 
 #tally number of each duration and number of correct answers
 duration_correct = {}
@@ -102,6 +102,8 @@ c = list(duration_correct_prop.values())
 #plot regression between duration and hit rate
 fig1, ax1 = plt.subplots(figsize=(15,10))
 sns.regplot(x=d, y=c, ax=ax1)
+sns.regplot(x=d, y=c, ax=ax1, logx=True, ci=False)
+ax1.vlines(0.125, 0, 1, colors='m', linestyle='dotted')
 ax1.set_xticks(np.arange(0.025, 0.525, 0.025))
 plt.setp(ax1.get_xticklabels(), rotation=45, ha="right",
          rotation_mode="anchor")
@@ -116,10 +118,17 @@ print('duration vs hit-rate, pearson-r:', stat.pearsonr(d, c)[0])
 print(stat.linregress(d, c))
 
 
-# In[8]:
+# In[ ]:
 
 
 #stimulus type vs hit rate
+
+total = len(clean_df.index)
+corr_sum = clean_df.sum()[4]
+hr = corr_sum/total
+print('Overall hit rate:', hr)
+print('One sample t-test for overall hit rate >0.5:', stat.ttest_1samp(list(clean_df['correct']), 0.5, alternative='greater'))
+
 
 #tally number of each type of trial and number of correct answers
 stim_corr = {}
@@ -143,14 +152,13 @@ c = stim_corr_prop.values()
 fig2, ax2 = plt.subplots(figsize=(10,10))
 ax2.bar(s, c)
 ax2.set_yticks(np.arange(0, 1.1, 0.1))
-ax2.set_xticks((1, 2, 3), ['Shapes', 'Letters', 'Numbers'])
+ax2.set_xticks((1, 2), ['Letters', 'Numbers'])
 ax2.set_xlabel('Stimulus Type')
 ax2.set_ylabel('Proportion Correct')
 ax2.set_title('Stimulus Type vs Proportion Correct')
 plt.show()
 
 #ind. samples t-test between stimuli types
-shapes = []
 letters = []
 numbers = []
 
@@ -158,15 +166,13 @@ for i in range(len(clean_df.index)):
     ans = clean_df.iloc[i]['actual_answer']
     corr = clean_df.iloc[i]['correct']
     if ans == 1.0:
-        shapes.append(corr)
-    elif ans == 2.0:
         letters.append(corr)
-    elif ans == 3.0:
+    elif ans == 2.0:
         numbers.append(corr)
 
-print('Ind. samples t-test, shape-letter:', stat.ttest_ind(shapes, letters))
-print('Ind. samples t-test, shape-number:', stat.ttest_ind(shapes, numbers))
 print('Ind. samples t-test, letter-number:', stat.ttest_ind(letters, numbers))
+print('One sample t-test for letter hit rate >0.5:', stat.ttest_1samp(letters, 0.5, alternative='greater'))
+print('One sample t-test for number hit rate >0.5:', stat.ttest_1samp(numbers, 0.5, alternative='greater'))
 
 
 # In[ ]:
