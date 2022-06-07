@@ -14,7 +14,7 @@ This previous work, as well as the deficits in visual consciousness associated w
 
 **Fig. 2:**
 
-![Fig. 2: trial design](https://github.com/sjh2208/GSP_Paris_Project/blob/main/trial_design_1.png?raw=true)
+![Fig. 2: trial design](https://github.com/sjh2208/GSP_Paris_Project/blob/main/trial_design.png?raw=true)
 
 In order to test this hypothesis, I propose a matched-pairs study design testing the hit rate of participants in the aforementioned task pre- and post-rTMS to the right IPS. Previous studies of TMS over parietal regions (see Bourgeois et al., 2013; Cappelletti et al., 2006; and Kanai et al., 2008) find the most significant effects on visual perception following stimulation of the right IPS over the left, presumably due to the right hemisphere's dominance in orienting attention. Using G\*Power (Faul et al., 2007), and approximating the Cohen's _d_ effect sizes found in these previous studies to be around 0.7 on average, I have determined that this study will require 15 healthy, adult participants who all pass the Transcranial Magnetic Stimulation Adult Safety Screen questionnaire (Keel et al., 2001) to acheive a desired power of 0.8.
 
