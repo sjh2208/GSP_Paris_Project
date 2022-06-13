@@ -1,22 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[116]:
 
 
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
-from collections import OrderedDict
 import numpy as np
 import seaborn as sns
 import scipy.stats as stat
-
-
-# In[ ]:
-
-
-#clean and organize data
 
 #all files will have this template for their path
 file_path = './data/{file_name}'
@@ -28,298 +21,201 @@ for f in files:
     elems = f.split('.')
     if elems[1] == 'csv':
         csvs.append(f)
-    
-#create empty df to fill with cleaned data    
-clean_df = pd.DataFrame(columns=['actual_answer', 'response', 'stimulus_duration', 'reaction_time', 'correct', 'vivid'])
-  
-#fill the new df with cleaned data from each individual csv    
-for f in csvs:
-    
-    #get appropriate columns and remove nans
-    datas = []
-    df = pd.read_csv(file_path.format(file_name=f))
-    datas.append(df['correct_resp'].tolist()[6:107])
-    datas.append(df['key_resp.keys'].tolist()[6:107])
-    datas.append(df['stim_interval'].tolist()[6:107])
-    datas.append(df['key_resp.rt'].tolist()[6:107])
-    datas.append(df['vivid_report'].tolist()[6:107])
-    new_datas = []
-    for d in datas:
-        new_d = [i for i in d if not (pd.isnull(i))==True]
-        new_datas.append(new_d)
-    
-    #create new df with cleaned columns
-    new_df = pd.DataFrame(columns=['actual_answer', 'response', 'stimulus_duration', 'reaction_time', 'correct', 'vivid'])
-    new_df['actual_answer'] = new_datas[0]
-    new_df['response'] = new_datas[1]
-    new_df['stimulus_duration'] = new_datas[2]
-    new_df['reaction_time'] = new_datas[3]
-    new_df['vivid'] = new_datas[4]
-    
-    #add cleaned dfs to overall df
-    clean_df = pd.concat([clean_df, new_df], ignore_index=True)
-
-#adds values to 'correct' col based on if the response matches the correct answer
-for i in range(len(clean_df.index)):
-    ans = clean_df.iloc[i]['actual_answer']
-    resp = clean_df.iloc[i]['response']
-    if resp == 'None':
-        resp = 0
-    if int(ans) == int(resp):
-        clean_df.at[i, 'correct'] = 1
-    else:
-        clean_df.at[i, 'correct'] = 0
-    
-#print and save cleaned df
-#print(clean_df)
-clean_df.to_csv('./clean_data.csv')
-print('Done with data cleaning!')
-
-
-# In[ ]:
-
-
-#stimulus type vs hit rate
-
-print('Number of trials:', len(clean_df.index))
-
-total = len(clean_df.index)
-corr_sum = clean_df.loc[:,'correct'].sum()
-hr = corr_sum/total
-print('Overall hit rate:', hr)
-print('One sample t-test for overall hit rate >0.5:', stat.ttest_1samp(list(clean_df['correct']), 0.5, alternative='greater'))
-
-
-#tally number of each type of trial and number of correct answers
-stim_corr = {}
-for i in range(len(clean_df.index)):
-    stim = clean_df.iloc[i]['actual_answer']
-    corr = clean_df.iloc[i]['correct']
-    if stim not in stim_corr:
-        stim_corr[stim] = (corr, 1)
-    else:
-        stim_corr[stim] = (stim_corr[stim][0] + corr, stim_corr[stim][1] + 1)
         
-#calculate hit rates for each type of stimuli        
-stim_corr_prop = {}
-for i in stim_corr:
-    stim_corr_prop[i] = (stim_corr[i][0])/(stim_corr[i][1])
+print('Files:', csvs)
 
-s = stim_corr_prop.keys()
-c = stim_corr_prop.values()
+entire_clean_data = pd.DataFrame(columns=['participant', 'correct_resp', 'resp', 'stim_interval', 
+                                          'rt', 'vivid_report', 'correct'])
 
-#plot bar graphs
-fig2, ax2 = plt.subplots(figsize=(10,10))
-ax2.bar(s, c)
-ax2.set_yticks(np.arange(0, 1.1, 0.1))
-ax2.set_xticks((1, 2), ['Letters', 'Numbers'])
-ax2.set_xlabel('Stimulus Type')
-ax2.set_ylabel('Proportion Correct')
-ax2.set_title('Stimulus Type vs Hit Rate')
-plt.show()
+for csv in csvs:
+    
+    #open and extract relevant columns from each participant's data
+    curr_file = pd.read_csv(file_path.format(file_name = csv))
+    new_df = curr_file[['participant', 'correct_resp', 'key_resp.keys', 
+                        'stim_interval', 'key_resp.rt', 'vivid_report']].copy()
+    
+    #drop the intro and exit routines
+    new_df = new_df.drop([0, 1, 2, 3, 4, 5, 106])
+    new_df = new_df.reset_index(drop=True)
+    
+    #put vividness response on the same line as the content response for each trial
+    for i in range(len(new_df.index)):
+        if i%2 == 0:
+            new_df.at[i, 'vivid_report'] = new_df.at[i + 1, 'vivid_report']
+        else:
+            new_df = new_df.drop([i])
+    new_df = new_df.reset_index(drop=True)
+    
+    #get rid of any trials where the response was not recorded and correctly format content responses
+    for i in range(len(new_df.index)):
+        resp = new_df.at[i, 'key_resp.keys']
+        viv = new_df.at[i, 'vivid_report']
+        if resp == 'None' or viv == '[]':
+            new_df = new_df.drop([i])
+        else:
+            new_df.at[i, 'key_resp.keys'] = float(resp)
+    new_df = new_df.reset_index(drop=True)
+    
+    #tally correct responses and add to df
+    corr = []
+    for i in range(len(new_df.index)):
+        resp = new_df.at[i, 'key_resp.keys']
+        ans = new_df.at[i, 'correct_resp']
+        if resp == ans:
+            corr.append(1.0)
+        else:
+            corr.append(0.0)
+    new_df.insert(loc=len(new_df.columns), column='correct', value=corr, allow_duplicates=True)
+    
+    #save each participant's cleaned dataset
+    new_df = new_df.rename(columns={'key_resp.keys':'resp', 'key_resp.rt':'rt'})
+    save_path = './clean_data/{save_name}.csv'
+    new_df.to_csv(save_path.format(save_name=csv.split('.')[0] + '_clean'), index=False)
+    
+    #append to overall dataset
+    entire_clean_data = pd.concat([new_df, entire_clean_data], ignore_index=True)
+    entire_clean_data.to_csv(save_path.format(save_name='overall_clean'))
+    
+print('Done cleaning files!')
 
-#ind. samples t-test between stimuli types
-letters = []
-numbers = []
 
-for i in range(len(clean_df.index)):
-    ans = clean_df.iloc[i]['actual_answer']
-    corr = clean_df.iloc[i]['correct']
-    if ans == 1.0:
-        letters.append(corr)
-    elif ans == 2.0:
-        numbers.append(corr)
-
-print('Ind. samples t-test, letter-number:', stat.ttest_ind(letters, numbers))
-print('One sample t-test for letter hit rate >0.5:', stat.ttest_1samp(letters, 0.5, alternative='greater'))
-print('One sample t-test for number hit rate >0.5:', stat.ttest_1samp(numbers, 0.5, alternative='greater'))
+# In[117]:
 
 
-# In[ ]:
+#all files will have this template for their path
+file_path = './clean_data/{file_name}'
 
+#get all the csv file names in the clean_data directory
+files = os.listdir('./clean_data')
+csvs = []
+for f in files:
+    elems = f.split('.')
+    if elems[1] == 'csv':
+        csvs.append(f)
+csvs.remove('overall_clean.csv')
+csvs.append('overall_clean.csv')
 
-#duration vs hit rate
+part_hr = {}
 
-print('Number of trials:', len(clean_df.index))
-
-#tally number of each duration and number of correct answers
-duration_correct = {}
-for i in range(len(clean_df.index)):
-    duration = clean_df.iloc[i]['stimulus_duration']
-    if duration not in duration_correct:
-        duration_correct[duration] = (clean_df.iloc[i]['correct'], 1)
+for i in range(len(csvs)):
+    
+    #read in each file
+    file = csvs[i]
+    df = pd.read_csv(file_path.format(file_name=file))
+    
+    #extract relevant info into lists
+    if i != len(csvs) - 1:
+        participant = df.at[0, 'participant']
     else:
-        duration_correct[duration] = (duration_correct[duration][0] + clean_df.iloc[i]['correct'], duration_correct[duration][1] + 1)
-
-#calculate hit rates for each duration 
-duration_correct_prop = {}
-for i in duration_correct:
-    duration_correct_prop[i] = (duration_correct[i][0])/(duration_correct[i][1])
-        
-duration_correct_prop = OrderedDict(sorted(duration_correct_prop.items()))
-d = list(duration_correct_prop.keys())
-c = list(duration_correct_prop.values())
-
-#plot regression between duration and hit rate
-fig1, ax1 = plt.subplots(figsize=(15,10))
-sns.regplot(x=d, y=c, ax=ax1)
-sns.regplot(x=d, y=c, ax=ax1, logx=True, ci=False)
-ax1.vlines(0.125, 0, 1, colors='m', linestyle='dotted')
-ax1.set_xticks(np.arange(0.025, 0.525, 0.025))
-plt.setp(ax1.get_xticklabels(), rotation=45, ha="right",
-         rotation_mode="anchor")
-ax1.set_yticks(np.arange(0, 1.1, 0.1))
-ax1.set_xlabel('Stimulus Duration (s)')
-ax1.set_ylabel('Proportion Correct')
-ax1.set_title('Duration vs Hit Rate')
-plt.show()
-
-#show summary statistics
-print('duration vs hit-rate, pearson-r:', stat.pearsonr(d, c)[0])
-print(stat.linregress(d, c))
-
-
-# In[ ]:
-
-
-#duration vs vividness
-
-print('Number of trials:', len(clean_df.index))
-
-#tally number of each duration and number of correct answers
-duration_vivid = {}
-for i in range(len(clean_df.index)):
-    duration = clean_df.iloc[i]['stimulus_duration']
-    vivid = clean_df.iloc[i]['vivid']
-    if vivid == "[]":
-        vivid = 1
-    vivid = int(vivid)
-    if duration not in duration_vivid:
-        duration_vivid[duration] = (vivid, 1)
-    else:
-        duration_vivid[duration] = (int(duration_vivid[duration][0]) + int(vivid), duration_vivid[duration][1] + 1)
-
-#calculate hit rates for each duration 
-duration_vivid_prop = {}
-for i in duration_vivid:
-    duration_vivid_prop[i] = (duration_vivid[i][0])/(duration_vivid[i][1])
-        
-duration_vivid_prop = OrderedDict(sorted(duration_vivid_prop.items()))
-d = list(duration_vivid_prop.keys())
-v = list(duration_vivid_prop.values())
-
-#plot regression between duration and hit rate
-fig3, ax3 = plt.subplots(figsize=(15,10))
-sns.regplot(x=d, y=v, ax=ax3)
-sns.regplot(x=d, y=v, ax=ax3, logx=True, ci=False)
-ax3.vlines(0.125, 0, 5, colors='m', linestyle='dotted')
-ax3.set_xticks(np.arange(0.025, 0.525, 0.025))
-plt.setp(ax3.get_xticklabels(), rotation=45, ha="right",
-         rotation_mode="anchor")
-ax3.set_yticks(np.arange(0, 6.0, 1.0))
-ax3.set_xlabel('Stimulus Duration (s)')
-ax3.set_ylabel('Avg. Vividness Rating')
-ax3.set_title('Duration vs Vividness')
-plt.show()
-
-#show summary statistics
-print('duration vs avg. vividness, pearson-r:', stat.pearsonr(d, v)[0])
-print(stat.linregress(d, v))
-
-
-# In[ ]:
-
-
-#vividness vs hit rate
-
-df = clean_df
-print('Number of trials:', len(df.index))
-
-vivid_corr = {}
-for i in range(len(df.index)):
-    vivid = df.iloc[i]['vivid']
-    corr = df.iloc[i]['correct']
-    if vivid == "[]":
-        vivid = 1
-    vivid = int(vivid)
-    if vivid not in vivid_corr:
-        vivid_corr[vivid] = (corr, 1)
-    else:
-        vivid_corr[vivid] = (vivid_corr[vivid][0] + corr, vivid_corr[vivid][1] + 1)
-        
-vivid_corr_prop = {}
-for i in vivid_corr:
-    vivid_corr_prop[i] = (vivid_corr[i][0])/(vivid_corr[i][1])
-vivid_corr = OrderedDict(sorted(vivid_corr_prop.items()))
-v = list(vivid_corr.keys())
-c = list(vivid_corr.values())
-
-fig4, ax4 = plt.subplots(figsize=(10, 10))
-sns.regplot(x=v, y=c, ax=ax4)
-ax4.set_xticks(np.arange(1, len(v) + 1, 1), v)
-ax4.set_yticks(np.arange(0, 1.1, 0.1))
-ax4.set_xlabel('Vividness Ratings')
-ax4.set_ylabel('Proportion Correct')
-ax4.set_title('Vividness vs Hit Rate')
-plt.show()
-
-#show summary statistics
-print('vividness vs hit rate, pearson-r:', stat.pearsonr(v, c)[0])
-print(stat.linregress(v, c))
-
-
-# In[ ]:
-
-
-#stimulus type vs vividness 
-
-df = clean_df
-print('Number of trials:', len(df.index))
-
-stim_vivid = {}
-for i in range(len(df.index)):
-    stim = df.iloc[i]['actual_answer']
-    vivid = df.iloc[i]['vivid']
-    if vivid == "[]":
-        vivid = 1
-    vivid = int(vivid)
-    if stim not in stim_vivid:
-        stim_vivid[stim] = (vivid, 1)
-    else:
-        stim_vivid[stim] = (stim_vivid[stim][0] + vivid, stim_vivid[stim][1] + 1)
-        
-stim_vivid_prop = {}
-for i in stim_vivid:
-    stim_vivid_prop[i] = (stim_vivid[i][0])/(stim_vivid[i][1])
-s = stim_vivid_prop.keys()
-v = stim_vivid_prop.values()
-
-#plot bar graphs
-fig5, ax5 = plt.subplots(figsize=(10,10))
-ax5.bar(s, v)
-ax5.set_yticks(np.arange(0, 5.5, 0.5))
-ax5.set_xticks((1, 2), ['Letters', 'Numbers'])
-ax5.set_xlabel('Stimulus Type')
-ax5.set_ylabel('Avg. vividness rating')
-ax5.set_title('Stimulus Type vs Vividness')
-plt.show()
-
-#ind. samples t-test between stimuli types
-letters = []
-numbers = []
-
-for i in range(len(df.index)):
-    ans = df.iloc[i]['actual_answer']
-    vivid = df.iloc[i]['vivid']
-    if vivid == "[]":
-        vivid = 1
-    vivid = int(vivid)
-    if ans == 1.0:
-        letters.append(vivid)
-    elif ans == 2.0:
-        numbers.append(vivid)
-
-print('Ind. samples t-test, letter-number:', stat.ttest_ind(letters, numbers))
+        participant = 'overall'
+    ans = df[['correct_resp']].values.tolist()
+    resp = df[['resp']].values.tolist()
+    dur = df[['stim_interval']].values.tolist()
+    rt = df[['rt']].values.tolist()
+    vivid = df[['vivid_report']].values.tolist()
+    corr = df[['correct']].values.tolist()
+    for i in range(len(df.index)):
+        ans[i] = float(ans[i][0])
+        resp[i] = float(resp[i][0])
+        dur[i] = float(dur[i][0])
+        rt[i] = float(rt[i][0])
+        vivid[i] = float(vivid[i][0])
+        corr[i] = float(corr[i][0])
+                   
+    #calculate relevant hit rates
+    def calc_hr(iv, corr):
+        dic1 = {}
+        for i in range(len(iv)):
+            e = iv[i]
+            c = corr[i]
+            if e not in dic1:
+                dic1[e] = (c, 1)
+            else:
+                dic1[e] = (dic1[e][0] + c, dic1[e][1] + 1)
+        dic2 = {}
+        for e in dic1:
+            dic2[e] = (dic1[e][0])/(dic1[e][1])
+        return dic2
+    overall_hr = sum(corr)/len(corr)
+    part_hr[participant] = overall_hr
+    dur_hr = calc_hr(dur, corr)
+    ans_hr = calc_hr(ans, corr)
+    resp_hr = calc_hr(resp, corr)
+    vivid_hr = calc_hr(vivid, corr)
+    dur_vivid = calc_hr(dur, vivid)
+    
+    #add columns to df for hit rates
+    for i in range(len(df.index)):
+        p = df.at[i, 'participant']
+        s = df.at[i, 'correct_resp']
+        r = df.at[i, 'resp']
+        d = df.at[i, 'stim_interval']
+        v = df.at[i, 'vivid_report']
+        df.at[i, 'participant_hr'] = part_hr[p]
+        df.at[i, 'stim_hr'] = ans_hr[s]
+        df.at[i, 'resp_hr'] = resp_hr[r]
+        df.at[i, 'dur_hr'] = dur_hr[d]
+        df.at[i, 'viv_hr'] = vivid_hr[v]
+    csv_path = './clean_data/{name}_clean.csv'
+    csv = csv_path.format(name=participant)
+    df.to_csv(csv, index=False)
+    
+    #show results
+    print('Participant:', participant)
+    print('Number of trials:', len(df.index))
+    print('Overall hit rate:', overall_hr)
+    print('One-sample t-test for hit rate >0.5:', stat.ttest_1samp(corr, 0.5, alternative='greater'))
+    
+    x = list(dur_hr.keys())
+    y = list(dur_hr.values())
+    print('Pearson correlation, duration and hit rate: r =', stat.pearsonr(x, y)[0],
+         'p-val =', stat.pearsonr(x, y)[1])
+    title = '{p}: Duration vs Hit Rate'
+    fig1, ax1 = plt.subplots(figsize=(15, 10))
+    sns.regplot(x=x, y=y, ax=ax1)
+    #sns.regplot(x=x, y=y, ax=ax1, logx=True, ci=False)
+    ax1.vlines(0.125, 0, 1, colors='m', linestyle='dotted')
+    ax1.set_xticks(np.arange(0.025, 0.525, 0.025))
+    plt.setp(ax1.get_xticklabels(), rotation=45, ha="right",
+             rotation_mode="anchor")
+    ax1.set_yticks(np.arange(0, 1.1, 0.1))
+    ax1.set_xlabel('Stimulus Duration (s)')
+    ax1.set_ylabel('Proportion Correct')
+    ax1.set_title(title.format(p = participant))
+    plt.show()
+    
+    x = list(vivid_hr.keys())
+    y = list(vivid_hr.values())
+    print('Spearman correlation, vividness and hit rate: r =', stat.spearmanr(x, y)[0],
+         'p-val =', stat.pearsonr(x, y)[1])
+    title = '{p}: Vividness vs Hit Rate'
+    fig2, ax2 = plt.subplots(figsize=(15, 10))
+    sns.regplot(x=x, y=y, ax=ax2, ci=False, color='r')
+    ax2.set_xticks(np.arange(1, len(x) + 1, 1))
+    ax2.set_yticks(np.arange(0, 1.1, 0.1))
+    ax2.set_xlabel('Subjective Vividness')
+    ax2.set_ylabel('Proportion Correct')
+    ax2.set_title(title.format(p = participant))
+    plt.show()
+    
+    x = list(dur_vivid.keys())
+    y = list(dur_vivid.values())
+    print('Spearman correlation, duration and vividness: r =', stat.spearmanr(x, y)[0],
+         'p-val =', stat.pearsonr(x, y)[1])
+    title = '{p}: Duration vs Vividness'
+    fig3, ax3 = plt.subplots(figsize=(15, 10))
+    sns.regplot(x=x, y=y, ax=ax3, ci=False, color='m')
+    ax3.set_xticks(np.arange(0.025, 0.525, 0.025))
+    plt.setp(ax3.get_xticklabels(), rotation=45, ha="right",
+             rotation_mode="anchor")
+    ax3.set_yticks(np.arange(1, 5.5, 0.5))
+    ax3.set_xlabel('Duration (s)')
+    ax3.set_ylabel('Avg. Subjective Vividness')
+    ax3.set_title(title.format(p = participant))
+    plt.show()
+    
+    
+    print('\n')
 
 
 # In[ ]:
