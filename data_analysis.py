@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[116]:
+# In[ ]:
 
 
 import pandas as pd
@@ -79,7 +79,7 @@ for csv in csvs:
 print('Done cleaning files!')
 
 
-# In[117]:
+# In[ ]:
 
 
 #all files will have this template for their path
@@ -158,6 +158,10 @@ for i in range(len(csvs)):
         df.at[i, 'viv_hr'] = vivid_hr[v]
     csv_path = './clean_data/{name}_clean.csv'
     csv = csv_path.format(name=participant)
+    try:
+        df.pop('Unnamed: 0')
+    except:
+        pass
     df.to_csv(csv, index=False)
     
     #show results
@@ -216,10 +220,4 @@ for i in range(len(csvs)):
     
     
     print('\n')
-
-
-# In[ ]:
-
-
-
 
