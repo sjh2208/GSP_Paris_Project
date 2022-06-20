@@ -26,7 +26,7 @@ A rough outline, combining the information from Figures 1, 2, and 3 above, of th
 
 Given the mixed factorial design, I will conduct a two-by-two repeated measures mixed ANOVA for differences in hit rate and subjective vividness both within- and between- participants. I expect a main effect of both session (within-participants) and stimulation validity (between-participants). I will also conduct a post-hoc analysis to determine the directionality of these differences, which I expect to reveal a decrease in hit rate and subjective vividness post-rTMS in the actual stimulation condition.
 
-The experiment will be administered on a MacBook Air running the experiment code in PsychoPy3 v2021.2.3, data cleaning and compiling will be done using the scipy.stats and matplotlib.pyplot modules in Python via a Jupyter Notebook, and data visualization and analysis will be conducted in JASP (JASP Team, 2022). The grid stimuli were randomly generated using the Pillows module in Python via a Jupyter Notebook, specifying each to have a two-thirds majority of either shapes or numbers.
+The experiment will be administered on a MacBook Air running the experiment code in PsychoPy3 v2021.2.3 (Peirce et al., 2019), data cleaning and compiling will be done using the scipy.stats and matplotlib.pyplot modules in Python via a Jupyter Notebook, and data visualization and analysis will be conducted in JASP (JASP Team, 2022). The grid stimuli were randomly generated using the Pillows module in Python via a Jupyter Notebook, specifying each to have a two-thirds majority of either shapes or numbers.
 
 
 **References**
@@ -56,6 +56,8 @@ Lamme, V. (2006). Towards a true neural stance on consciousness. _Trends in Cogn
 Michel, M., Beck, D., Block, N., Blumenfeld, H., Brown, R., Carmel, D., ... & Dehaene, S. (2019). Opportunities and challenges for a maturing science of consciousness. _Nature Human Behaviour_, 3(2), 104.
 
 Naccache, L. (2018). Why and how access consciousness can account for phenomenal consciousness. _Phil. Trans. R. Soc. B_, 373(1755).
+
+Peirce, J. W., Gray, J. R., Simpson, S., MacAskill, M. R., Höchenberger, R., Sogo, H., Kastman, E., & Lindeløv, J. (2019). PsychoPy2: experiments in behavior made easy. _Behavior Research Methods_.
 
 
 # Code Instructions
