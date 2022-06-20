@@ -28,6 +28,8 @@ Given the mixed factorial design, I will conduct a two-by-two repeated measures 
 
 The experiment will be administered on a MacBook Air running the experiment code in PsychoPy3 v2021.2.3 (Peirce et al., 2019), data cleaning and compiling will be done using the scipy.stats and matplotlib.pyplot modules in Python via a Jupyter Notebook, and data visualization and analysis will be conducted in JASP (JASP Team, 2022). The grid stimuli were randomly generated using the Pillows module in Python via a Jupyter Notebook, specifying each to have a two-thirds majority of either shapes or numbers.
 
+Link to my slides presenation on this project: https://docs.google.com/presentation/d/1sHPlPKrCcrFEbfyhWDobI4HJ01Q2_hHFpZsKIzpR4EM/edit?usp=sharing
+
 
 **References**
 
