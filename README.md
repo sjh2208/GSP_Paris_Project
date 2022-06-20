@@ -26,7 +26,7 @@ A rough outline, combining the information from Figures 1, 2, and 3 above, of th
 
 Given the mixed factorial design, I will conduct a two-by-two repeated measures mixed ANOVA for differences in hit rate and subjective vividness both within- and between- participants. I expect a main effect of both session (within-participants) and stimulation validity (between-participants). I will also conduct a post-hoc analysis to determine the directionality of these differences, which I expect to reveal a decrease in hit rate and subjective vividness post-rTMS in the actual stimulation condition.
 
-The experiment will be administered on a MacBook Air running the experiment code in PsychoPy3 v2021.2.3, data cleaning and compiling will be done using the scipy.stats and matplotlib.pyplot modules in Python via a Jupyter Notebook, and data visualization and analysis will be conducted in JASP. The grid stimuli were randomly generated using the Pillows module in Python via a Jupyter Notebook, specifying each to have a two-thirds majority of either shapes or numbers.
+The experiment will be administered on a MacBook Air running the experiment code in PsychoPy3 v2021.2.3, data cleaning and compiling will be done using the scipy.stats and matplotlib.pyplot modules in Python via a Jupyter Notebook, and data visualization and analysis will be conducted in JASP (JASP Team, 2022). The grid stimuli were randomly generated using the Pillows module in Python via a Jupyter Notebook, specifying each to have a two-thirds majority of either shapes or numbers.
 
 
 **References**
@@ -45,15 +45,18 @@ Fiebelkorn, I. C., Pinsk, M. A., & Kastner, S. (2018). A dynamic interplay withi
 
 Faul, F., Erdfelder, E., Lang, A.-G., & Buchner, A. (2007). G\*Power 3: A flexible statistical power analysis program for the social, behavioral, and biomedical sciences. _Behavior Research Methods_, 39, 175-191.
 
+JASP Team (2022). JASP (Version 0.16.3) \[Computer software\].
+
 Kanai, R., Muggleton, N. G., & Walsh, V. (2008). TMS Over the Intraparietal Sulcus Induces Perceptual Fading. _Journal of Neurophysiology_, 100, 3343-3350.
 
 Keel, J. C., Smith, M. J., & Wasserman, E. M. (2001). A safety screening questionnaire for transcranial magnetic stimulation. _Clinical Neurophysiology_, 112, 720.
 
 Lamme, V. (2006). Towards a true neural stance on consciousness. _Trends in Cognitive Sciences_, 10(11), 494-501.
 
+Michel, M., Beck, D., Block, N., Blumenfeld, H., Brown, R., Carmel, D., ... & Dehaene, S. (2019). Opportunities and challenges for a maturing science of consciousness. _Nature Human Behaviour_, 3(2), 104.
+
 Naccache, L. (2018). Why and how access consciousness can account for phenomenal consciousness. _Phil. Trans. R. Soc. B_, 373(1755).
 
-Michel, M., Beck, D., Block, N., Blumenfeld, H., Brown, R., Carmel, D., ... & Dehaene, S. (2019). Opportunities and challenges for a maturing science of consciousness. _Nature Human Behaviour_, 3(2), 104.
 
 # Code Instructions
 
